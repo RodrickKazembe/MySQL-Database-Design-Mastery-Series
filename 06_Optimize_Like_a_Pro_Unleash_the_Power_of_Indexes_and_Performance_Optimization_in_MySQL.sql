@@ -10,7 +10,6 @@ ON Customers;
 CREATE INDEX idx_customers_last_name
 ON Customers(last_name);
 
--- Using the EXPLAIN statement to analyze a query (let's assume we want to analyze a query that fetches customers with a specific last name):
-
+-- 4. Using the EXPLAIN statement to analyze a query (let's assume we want to analyze a query that fetches customers with a specific last name):
 EXPLAIN
 SELECT * FROM Customers WHERE last_name = 'Edison';
