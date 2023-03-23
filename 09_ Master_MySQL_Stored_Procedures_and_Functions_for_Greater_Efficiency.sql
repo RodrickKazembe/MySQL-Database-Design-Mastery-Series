@@ -11,13 +11,13 @@ CALL GetAllCustomers();
 
 -- 3. Creating a Function:
 DELIMITER //
-CREATE FUNCTION TotalSales(customer_id INT) 
+CREATE FUNCTION TotalSales(p_customer_id INT) 
 RETURNS DECIMAL(10,2) 
 DETERMINISTIC
 READS SQL DATA
 BEGIN
   DECLARE total_sales DECIMAL(10,2);
-  SELECT SUM(sales_amount) INTO total_sales FROM Sales WHERE Customer_ID = customer_id;
+  SELECT SUM(order_value) INTO total_sales FROM Orders WHERE Customer_ID = p_customer_id;
   RETURN total_sales;
 END //
 DELIMITER ;
