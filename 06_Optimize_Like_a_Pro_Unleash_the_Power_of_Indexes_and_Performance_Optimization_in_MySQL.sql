@@ -13,6 +13,4 @@ ON Customers(last_name);
 -- Using the EXPLAIN statement to analyze a query (let's assume we want to analyze a query that fetches customers with a specific last name):
 
 EXPLAIN
-SELECT * FROM Customers WHERE last_name = 'Doe';
-
--- These scripts show how to create, manage, and analyze indexes in MySQL. Remember to run these queries after creating the necessary tables in your database. Apply the best practices for optimizing performance as needed to maintain an efficient database.
+SELECT * FROM Customers WHERE last_name = 'Edison';
