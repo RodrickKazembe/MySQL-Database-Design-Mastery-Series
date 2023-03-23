@@ -48,4 +48,4 @@ DELIMITER ;
 CALL GetCustomersByLastName('Edison');
 
 -- 7. To call the stored procedure without a parameter:
-CALL GetCustomersByLastName();
+CALL GetCustomersByLastName(NULL);
