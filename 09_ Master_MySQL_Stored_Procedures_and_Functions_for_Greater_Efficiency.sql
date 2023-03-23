@@ -23,7 +23,7 @@ END //
 DELIMITER ;
 
 -- 4. Using a Function:
-SELECT Customer_ID, Customer_Name, TotalSales(Customer_ID) AS Total_Sales FROM Customers;
+SELECT Customer_ID, First_Name, Last_Name, TotalSales(Customer_ID) AS Total_Sales FROM Customers;
 
 -- 5. Error Handling and Parameter Passing:
 DELIMITER //
