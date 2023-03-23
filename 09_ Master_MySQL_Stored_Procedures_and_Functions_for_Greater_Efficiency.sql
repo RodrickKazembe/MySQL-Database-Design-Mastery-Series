@@ -27,7 +27,7 @@ SELECT Customer_ID, First_Name, Last_Name, TotalSales(Customer_ID) AS Total_Sale
 
 -- 5. Error Handling and Parameter Passing:
 DELIMITER //
-CREATE PROCEDURE GetCustomersByLastName(IN search_last_name VARCHAR(255) DEFAULT NULL)
+CREATE PROCEDURE GetCustomersByLastName(IN search_last_name VARCHAR(255))
 BEGIN
   DECLARE exit_handler CONDITION FOR SQLSTATE '02000';
   DECLARE CONTINUE HANDLER FOR exit_handler
@@ -45,7 +45,7 @@ END //
 DELIMITER ;
 
 -- 6. To call the stored procedure with a parameter:
-CALL GetCustomersByLastName('Smith');
+CALL GetCustomersByLastName('Edison');
 
 -- 7. To call the stored procedure without a parameter:
 CALL GetCustomersByLastName();
